@@ -1,0 +1,13 @@
+python int4_baseline_quzo.py \
+  --model_name Qwen/Qwen2.5-3B-Instruct-GPTQ-Int4 \
+  --sigma 0.001 \
+  --alpha 0.00001 \
+  --population_size 50 \
+  --num_engines 4 \
+  --num_iterations 301 \
+  --experiment_dir experiment_quant/int4-baseline-QuZO \
+  --discrete_step_gain 1.0 \
+  --cuda_devices 0,1,2,3 \
+  --global_seed 10086 \
+  --mirror_sampling \
+  --verbose

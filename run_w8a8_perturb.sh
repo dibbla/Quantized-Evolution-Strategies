@@ -1,0 +1,13 @@
+python w8a8_perturb.py \
+  --model_name neuralmagic/Qwen2.5-1.5B-Instruct-quantized.w8a8 \
+  --sigma 0.01 \
+  --alpha 0.001 \
+  --population_size 50 \
+  --num_engines 4 \
+  --num_iterations 350 \
+  --experiment_dir experiment_quant/w8a8-seed-replay \
+  --discrete_step_gain 1.0 \
+  --cuda_devices 4,5,6,7 \
+  --global_seed 10086 \
+  --mirror_sampling \
+  --verbose

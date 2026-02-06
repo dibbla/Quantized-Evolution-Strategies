@@ -1,0 +1,13 @@
+python int4_perturb.py \
+  --model_name Qwen/Qwen2.5-3B-Instruct-GPTQ-Int4 \
+  --sigma 0.005 \
+  --alpha 0.0003 \
+  --population_size 50 \
+  --num_engines 4 \
+  --num_iterations 350 \
+  --experiment_dir experiment_quant/int4-3B-seed-replay \
+  --discrete_step_gain 1.0 \
+  --cuda_devices 0,1,2,3 \
+  --global_seed 10086 \
+  --mirror_sampling \
+  --verbose
